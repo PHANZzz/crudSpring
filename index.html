@@ -11,14 +11,14 @@
       <div class="w-full mx-auto rounded-lg border border-gray-200 bg-white px-5 py-5">
         <div class="flex flex-col">
           <div class="text-center w-full font-semibold text-2xl text-gray-800 mb-2">Data Table</div>
-          <div class="mx-auto mb-4 w-full max-w-sm rounded-lg border border-gray-200 bg-white shadow-md overflow-hidden">
-            <table class="w-full table-auto" id="data-table">
+          <div class="mx-auto mb-4 w-full max-w-xs rounded-lg border border-gray-200 bg-white shadow-md overflow-hidden">
+            <table class="w-full table-auto text-xs" id="data-table">
               <thead>
                 <tr class="text-left text-gray-700 bg-gray-100">
-                  <th class="px-2 py-1">User ID</th>
-                  <th class="px-2 py-1">Username</th>
-                  <th class="px-2 py-1">Address</th>
-                  <th class="px-2 py-1">Actions</th>
+                  <th class="px-1 py-0.5">User ID</th>
+                  <th class="px-1 py-0.5">Username</th>
+                  <th class="px-1 py-0.5">Address</th>
+                  <th class="px-1 py-0.5">Actions</th>
                 </tr>
               </thead>
               <tbody class="text-gray-700" id="table-body">
@@ -42,12 +42,12 @@
             data.forEach(item => {
               const row = document.createElement('tr');
               row.innerHTML = `
-                <td class="border px-2 py-1">${item.userID}</td>
-                <td class="border px-2 py-1">${item.username}</td>
-                <td class="border px-2 py-1">${item.address}</td>
-                <td class="border px-2 py-1 flex justify-around">
-                  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded" onclick="editItem(${item.userID})">Edit</button>
-                  <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded" onclick="deleteItem(${item.userID})">Delete</button>
+                <td class="border px-1 py-0.5">${item.userID}</td>
+                <td class="border px-1 py-0.5">${item.username}</td>
+                <td class="border px-1 py-0.5">${item.address}</td>
+                <td class="border px-1 py-0.5 flex justify-around">
+                  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded text-xs" onclick="editItem(${item.userID})">Edit</button>
+                  <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded text-xs" onclick="deleteItem(${item.userID})">Delete</button>
                 </td>
               `;
               tableBody.appendChild(row);
